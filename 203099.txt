@@ -1,0 +1,110 @@
+1.
+Verzija na lokalno instaliran Git:
+> git --version
+git version 2.30.2.windows.1
+
+Link do kreiran GitHub profi:
+https://github.com/DimeJovanovski/
+
+2. 
+Smenet repository default branch imeto vo "master".
+
+3. 
+https://github.com/DimeJovanovski/SI_2022_lab1_203099/
+
+4. 
+> git clone https://github.com/DimeJovanovski/SI_2022_lab1_203099.git
+
+5. 
+> notepad shopping_list.txt
+> git add .
+> git commit -m "Add 5 items to the shopping list"
+
+6.
+git add .
+git commit -m "Add quantities to the items."
+
+7.
+> git branch branch1
+> git branch branch2
+
+8.
+> git log --graph --pretty=oneline --abbrev-commit
+* 1b02949 (origin/branch2) Add quantities to the items.
+* 0468772 Add 5 items to the shopping list
+* d768a53 Update README.md
+* 007343b Initial commit
+
+9.
+> git push origin --all
+
+10.
+> git checkout branch1
+
+11.
+> notepad shopping_list.txt
+> git add .
+> git commit -m "Change quantity of item #5"
+
+12.
+> git checkout master
+
+13.
+> notepad shopping_list.txt
+> git add .
+> git commit -m "Change quantity of item #2"
+
+14.
+> git push origin --all
+
+15.
+> git checkout branch2
+
+16.
+> notepad shopping_list.txt
+> git add .
+> git commit -m "Modify item #4"
+
+17.
+> git log --graph --pretty=oneline --abbrev-commit
+  * 0125afa (branch2) Modify item #4
+   \
+  * | bdd6919 (origin/branch1, branch1) Change quantity of item #5
+  |/
+* / ec8323d (origin/master, origin/HEAD) Change quantity of item #2
+|/
+* 1b02949 (origin/branch2) Add quantities to the items.
+* 0468772 Add 5 items to the shopping list
+* d768a53 Update README.md
+* 007343b Initial commit
+
+18.
+> git reset --soft HEAD~1
+> notepad shopping_list.txt
+> git add .
+> git commit -m "Modify item #4 and add item #6"
+
+19.
+> git log --graph --pretty=oneline --abbrev-commit
+  * 0125afa (branch2) Modify item #4 and add item #6
+   \
+  * | bdd6919 (origin/branch1, branch1) Change quantity of item #5
+  |/
+* / ec8323d (origin/master, origin/HEAD) Change quantity of item #2
+|/
+* 1b02949 (origin/branch2) Add quantities to the items.
+* 0468772 Add 5 items to the shopping list
+* d768a53 Update README.md
+* 007343b Initial commit
+
+20.
+> git checkout master
+> git merge branch1
+
+21.
+> git commit -m "commit changes" <-- za da se razreshi konfliktot
+> git merge branch2
+
+22.
+> git add .
+> git commit -m "Add docs"
