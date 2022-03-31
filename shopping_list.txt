@@ -1,5 +1,5 @@
-Milk
-Broccoli
-Fish
-Bread
-Chips
+Milk x 1
+Broccoli x 3
+Fish x 4
+Bread x 2
+Chips x 1
